@@ -1,0 +1,80 @@
+<div class="md:flex items-start justify-center py-12 2xl:px-20 md:px-6 px-4 pt-16">
+    <div class="xl:w-2/6 lg:w-2/5 w-80 md:block hidden">
+        <!-- <img class="w-full" alt="project" [src]="user.image" />
+        <div class="md:flex items-center justify-between mt-3 space-x-4 md:space-x-0" *ngFor="let image of user.images">
+            <img alt="image-tag-one" class="md:w-10 md:h-10 w-10" [src]="image" />
+        </div> -->
+        <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+    </div>
+    <div class="md:hidden">
+        <img class="w-full" alt="project image" [src]="user.image" />
+        <div class="flex items-center justify-between mt-3 space-x-4 md:space-x-0" *ngFor="let image of user.images">
+            <img alt="image-tag-one" class="md:w-4 md:h-4 w-4" [src]="image" />
+        </div>
+    </div>
+    <div class="xl:w-2/5 md:w-1/2 lg:ml-8 md:ml-6 md:mt-0 mt-6">
+        <div class="border-b border-gray-200 pb-6">
+            <p class="text-sm leading-none text-gray-600 dark:text-gray-300 ">{{user.title}}</p>
+            <h1 class="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 dark:text-white mt-2">
+                {{user.title}}</h1>
+        </div>
+        <div class="py-4 border-b border-gray-200 flex items-center justify-between">
+            <p class="text-base leading-4 text-gray-800 dark:text-gray-300">Location</p>
+            <div class="flex items-center justify-center">
+                <p class="text-sm leading-none text-gray-600 dark:text-gray-300">{{user.details}}</p>
+            </div>
+        </div>
+        <div class="py-4 border-b border-gray-200 flex items-center justify-between">
+            <p class="text-base leading-4 text-gray-800 dark:text-gray-300">Date</p>
+            <div class="flex items-center justify-center">
+                <p class="text-sm leading-none text-gray-600 dark:text-gray-300 mr-3">{{user.date}}</p>
+                <!--                 
+                <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/productDetail3-svg2.svg" alt="next">
+                <img class="hidden dark:block" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/productDetail3-svg2dark.svg" alt="next">   -->
+            </div>
+        </div>
+        <!-- <button class="dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white bg-gray-800 w-full py-4 hover:bg-gray-700 focus:outline-none">
+            <img class="mr-3 dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/svg1.svg" alt="location">
+            <img class="mr-3 hidden dark:block" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/svg1dark.svg" alt="location">
+            Check availability in store
+        </button> -->
+        <div>
+            <h1 class="text-bold">Description:</h1>
+            <p class=" text-base lg:leading-tight leading-normal text-gray-600 dark:text-gray-300 mt-7">Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                id est laborum.</p>
+            <!-- <p class="text-base leading-4 mt-7 text-gray-600 dark:text-gray-300">Product Code: 8BN321AF2IF0NYA</p>
+            <p class="text-base leading-4 mt-4 text-gray-600 dark:text-gray-300">Length: 13.2 inches</p>
+            <p class="text-base leading-4 mt-4 text-gray-600 dark:text-gray-300">Height: 10 inches</p>
+            <p class="text-base leading-4 mt-4 text-gray-600 dark:text-gray-300">Depth: 5.1 inches</p>
+            <p class="md:w-96 text-base leading-normal text-gray-600 dark:text-gray-300 mt-4">Composition: 100% calf leather, inside: 100% lamb leather</p> -->
+        </div>
+        <div>
+            <!-- <div class="border-t border-b py-4 mt-7 border-gray-200">
+                <div data-menu class="flex justify-between items-center cursor-pointer">
+                    <p class="text-base leading-4 text-gray-800 dark:text-gray-300">Shipping and returns</p>
+                    <button class="cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 rounded" role="button" aria-label="show or hide">
+                        <img class="transform dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/productDetail3-svg4.svg" alt="dropdown">
+                        <img class="transform hidden dark:block" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/productDetail3-svg4dark.svg" alt="dropdown">
+                    </button>
+                </div>
+                <div class="hidden pt-4 text-base leading-normal pr-12 mt-4 text-gray-600 dark:text-gray-300" id="sect">You will be responsible for paying for your own shipping costs for returning your item. Shipping costs are nonrefundable</div>
+            </div> -->
+        </div>
+        <!-- <div>
+            <div class="border-b py-4 border-gray-200">
+                <div data-menu class="flex justify-between items-center cursor-pointer">
+                    <p class="text-base leading-4 text-gray-800 dark:text-gray-300">Contact us</p>
+                    <button class="cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 rounded" role="button" aria-label="show or hide">
+                        <img class="transform dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/productDetail3-svg4.svg" alt="dropdown">
+                        <img class="transform hidden dark:block" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/productDetail3-svg4dark.svg" alt="dropdown">
+                    </button>
+                </div>
+                <div class="hidden pt-4 text-base leading-normal pr-12 mt-4 text-gray-600 dark:text-gray-300" id="sect">If you have any questions on how to return your item to us, contact us.</div>
+            </div> -->
+        <!-- </div> -->
+    </div>
+</div>

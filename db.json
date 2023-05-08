@@ -1,0 +1,49 @@
+{
+    "image":[
+        {
+            "id": 1,
+            "title" : "Office",
+            "image" : "../../assets/office/Rendered.jpg",
+            "description": "Our office at wuye",
+            "details" : "suite C020 H&A Plaza, wuye, Abuja.",
+            "images": [],
+            "date": "1ST April 2021"
+        },
+        {
+            "id": 2,
+            "title" : "POP",
+            "image" : "../../assets/pop work/ceiling.jpeg",
+            "description": "Abuja",
+            "details" : "Abuja",
+            "images": [],
+            "date": "31ST May 2020"
+        },
+        {
+            "id": 3,
+            "title" : "QALAM TOUR",
+            "image" : "../../assets/Qualam/qalam.jpg",
+            "description": "Abuja",
+            "details" : "Abuja",
+            "images": [],
+            "date": "22ND December 2019"
+        },
+        {
+            "id": 4,
+            "title" : "SECRET GARDEN",
+            "image" : "../../assets/Secret garden/Garden.jpg",
+            "description": "Abuja",
+            "details" : "Abuja",
+            "images": [],
+            "date": "18TH June 2022"
+        },
+        {
+            "id": 5,
+            "title" : "SIAM CITY",
+            "image" : "../../assets/Siam city/Siam.jpg",
+            "description": "Abuja",
+            "details" : "Abuja",
+            "images": [],
+            "date": "20TH August 2020"
+        }
+    ]
+}
