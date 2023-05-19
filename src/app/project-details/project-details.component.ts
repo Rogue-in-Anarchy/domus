@@ -25,6 +25,7 @@ export class ProjectDetailsComponent implements OnInit {
     this.service.find(id).subscribe({
       next: (data: any) => {
         this.user = data;
+        this.galleryImages = data.images;
         console.log(this.user)
       },
       error: (err) => {
@@ -55,8 +56,6 @@ export class ProjectDetailsComponent implements OnInit {
         preview: false
       }
     ];
-
-    this.galleryImages = this.user.images
 
   }
 }
