@@ -1,6 +1,7 @@
 <div class="body">
-  <div class="w-100 container mx-auto px-3 py-5">
+  <div class="w-100 container mx-auto px-3 py-5 my-5">
     <div class="mx-auto pt-16">
+      
       <div>
         <div class="flex justify-center ">
           <h3 class="font-light text-4xl text-white mt-auto">Actualizing Your</h3>
@@ -8,15 +9,59 @@
         <hr class="w-10 data-te-animation-init md:w-40" data-te-animation-reset="true"
           data-te-animation="[slide-right_1s_ease-in-out]">
         <hr class="w-10 ml-auto md:w-40">
-        <h3 class="font-bold text-3xl text-white mx-auto flex justify-center md:text-6xl py-4 sm:text-3xl">Dream House
+        <h3 class="font-bold text-3xl text-white mx-auto flex justify-center md:text-6xl py-4 sm:text-3xl mb-5">Dream House
         </h3>
       </div>
-      <div class="rounded-lg">
-        <img src="../../assets/landing/living room.jpg" alt="">
+      <div class="w-full mx-auto pb-8 md:h-16 sm:h-52 mb-5">
+        <div class="hidden lg:block">
+          <ngx-slick-carousel class="carousel" 
+          #slickModal="slick-carousel" 
+          [config]="slideConfig" 
+          (init)="slickInit($event)"
+          (breakpoint)="breakpoint($event)"
+          (afterChange)="afterChange($event)"
+          (beforeChange)="beforeChange($event)"
+          >
+            <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+              <img src="{{ slide.img }}" alt="" width="100%">
+            </div>
+          </ngx-slick-carousel>
+        </div>
+        <div class="hidden md:block lg:hidden">
+          <ngx-slick-carousel class="carousel" 
+          #slickModal="slick-carousel" 
+          [config]="slidersConfig" 
+          (init)="slickInit($event)"
+          (breakpoint)="breakpoint($event)"
+          (afterChange)="afterChange($event)"
+          (beforeChange)="beforeChange($event)"
+          >
+            <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+              <img src="{{ slide.img }}" alt="" width="100%">
+            </div>
+          </ngx-slick-carousel>
+        </div>
+        <div class="md:hidden">
+          <ngx-slick-carousel class="carousel" 
+          #slickModal="slick-carousel" 
+          [config]="sliderConfig" 
+          (init)="slickInit($event)"
+          (breakpoint)="breakpoint($event)"
+          (afterChange)="afterChange($event)"
+          (beforeChange)="beforeChange($event)"
+          >
+            <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+              <img src="{{ slide.img }}" alt="" width="100%">
+            </div>
+          </ngx-slick-carousel>
+        </div>
+        <div class="mx-auto w-1/2 text-center mt-20 font-mono pb-20">
+          <div>
+            <h2 class="text-2xl font-bold">FOR OVER 10 YEARS WE HAVE HAD ONE GOAL:</h2>
+            <p>Attention to details which transform the concept to live in a house that has the greatest expression of comfort and elegance</p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="flex justify-center">
-      <!-- <h1>Been building Comfortable homes for a long time</h1> -->
     </div>
     <!-- <div class="">
     <div class="flex sample mx-auto">
